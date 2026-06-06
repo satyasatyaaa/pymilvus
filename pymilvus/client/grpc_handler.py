@@ -358,7 +358,7 @@ class GrpcHandler:
             "grpc.keepalive_permit_without_calls": True,
         }
         # Merge user-provided options (user options override defaults)
-        default_opts.update(self._grpc_options)
+        #default_opts.update(self._grpc_options)
         opts = list(default_opts.items())
         target_address = address or self._address
 
