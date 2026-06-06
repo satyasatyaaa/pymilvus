@@ -266,8 +266,8 @@ class GrpcHandler:
         if self._channel is None:
             # Default gRPC options
             default_opts = {
-                cygrpc.ChannelArgKey.max_send_message_length: -1,
-                cygrpc.ChannelArgKey.max_receive_message_length: -1,
+                cygrpc.ChannelArgKey.max_send_message_length: 100 * 1024 * 1024,
+                cygrpc.ChannelArgKey.max_receive_message_length: 100 * 1024 * 1024,
                 "grpc.enable_retries": 1,
                 "grpc.keepalive_time_ms": 10000,
                 "grpc.keepalive_timeout_ms": 5000,
